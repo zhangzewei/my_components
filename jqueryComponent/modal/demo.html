@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal Component</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+  </style>
+  <link rel="stylesheet" href="./css/modal.css">
+</head>
+
+<body>
+  <button class="mark-trigger" data-trigger="first">点击触发弹窗</button>
+  <button class="mark-trigger" data-trigger="second">点击触发弹窗2</button>
+  <button class="mark-trigger" data-trigger="third">点击触发弹窗3</button>
+  <div class="mark-modal modal-container" data-modal="first">
+    <div class="modal-header">head</div>
+    <div class="modal-body">body</div>
+    <div class="modal-footer">
+      <button class="mark-cancel" data-role="cancel">cancel</button>
+      <button class="mark-confirm" data-role="confirm">confirm</button>
+    </div>
+  </div>
+
+  <div class="mark-modal modal-container" data-modal="second">
+    <div class="modal-header">head</div>
+    <div class="modal-body">body2</div>
+    <div class="modal-footer">
+      <button class="mark-cancel" data-role="cancel">cancel</button>
+      <button class="mark-confirm" data-role="confirm">confirm</button>
+    </div>
+  </div>
+
+
+  <div class="mark-modal modal-container" data-modal="third">
+    <div class="modal-header">head</div>
+    <div class="modal-body">body3</div>
+    <div class="modal-footer">
+      <button class="mark-cancel" data-role="cancel">cancel</button>
+      <button class="mark-confirm" data-role="confirm">confirm</button>
+    </div>
+  </div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="./js/modal.js"></script>
+<script>
+</script>
+
+</html>
