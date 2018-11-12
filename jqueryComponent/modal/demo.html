@@ -24,30 +24,30 @@
   <button class="mark-trigger" data-trigger="second">点击触发弹窗2</button>
   <button class="mark-trigger" data-trigger="third">点击触发弹窗3</button>
   <div class="mark-modal modal-container" data-modal="first">
-    <div class="modal-header">head</div>
-    <div class="modal-body">body</div>
+    <div class="modal-header">modal1 head</div>
+    <div class="modal-body">modal1 body</div>
     <div class="modal-footer">
-      <button class="mark-cancel" data-role="cancel">cancel</button>
-      <button class="mark-confirm" data-role="confirm">confirm</button>
+      <button class="mark-cancel" data-role="cancel" onclick="alert('modal1 cancel')">cancel</button>
+      <button class="mark-confirm" data-role="confirm" onclick="alert('modal1 confirm')">confirm</button>
     </div>
   </div>
 
   <div class="mark-modal modal-container" data-modal="second">
-    <div class="modal-header">head</div>
-    <div class="modal-body">body2</div>
+    <div class="modal-header">modal2 head</div>
+    <div class="modal-body">modal2 body</div>
     <div class="modal-footer">
-      <button class="mark-cancel" data-role="cancel">cancel</button>
-      <button class="mark-confirm" data-role="confirm">confirm</button>
+      <button class="mark-cancel" data-role="cancel" onclick="alert('modal2 cancel')">cancel</button>
+      <button class="mark-confirm" data-role="confirm" onclick="alert('modal2 confirm')">confirm</button>
     </div>
   </div>
 
 
   <div class="mark-modal modal-container" data-modal="third">
-    <div class="modal-header">head</div>
-    <div class="modal-body">body3</div>
+    <div class="modal-header">modal3 head</div>
+    <div class="modal-body">modal3 body</div>
     <div class="modal-footer">
-      <button class="mark-cancel" data-role="cancel">cancel</button>
-      <button class="mark-confirm" data-role="confirm">confirm</button>
+      <button class="mark-cancel" data-role="cancel" onclick="alert('modal3 cancel')">cancel</button>
+      <button class="mark-confirm" data-role="confirm" onclick="alert('modal3 confirm')">confirm</button>
     </div>
   </div>
 </body>
