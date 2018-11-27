@@ -16,7 +16,6 @@ export class AppComponent {
     this.router.events.pipe(
       filter(evt => evt instanceof NavigationEnd)
     ).subscribe((_: NavigationEnd) => {
-      console.log(this.route)
       this.showBottomNav = get(this.route, 'snapshot.firstChild.data.showBottomNav', true);
     });
   }

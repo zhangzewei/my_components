@@ -1,3 +1,8 @@
-<p>
-  dashboard works!
-</p>
+<div class="menus">
+  <div class="header">DashBoard</div>
+  <div class="menu-list">
+    <ng-container *ngIf="menus.length">
+      <a *ngFor="let link of menus" routerLink="{{link.path}}" [ngStyle]="{'background': link.bgColor }" class="link">{{link.name}}</a>
+    </ng-container>
+  </div>
+</div>
