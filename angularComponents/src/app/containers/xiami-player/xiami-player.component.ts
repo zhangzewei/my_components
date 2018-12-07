@@ -48,6 +48,7 @@ export class XiamiPlayerComponent implements AfterViewInit {
     const moveRate = Math.abs(distanceY) / this.replyListEle.offsetHeight;
     if (distanceY <= 0 && !this.showReplyList) {// up
       if (!(this.replyListOffset <= -this.replyListEle.clientHeight)) {
+        this.headerDuring = '0.01s';
         this.replyListDuring = '0.01s';
         this.replyListOffset = -96 + distanceY;
         this.headerOffset = moveRate * this.headerEle.offsetHeight - 48;
@@ -57,6 +58,7 @@ export class XiamiPlayerComponent implements AfterViewInit {
     }
     if (distanceY > 0 && this.showReplyList) {// down
       if (!(this.replyListOffset >= -96)) {
+        this.headerDuring = '0.01s';
         this.replyListDuring = '0.01s';
         this.replyListOffset = -this.replyListEle.clientHeight + distanceY;
         this.headerOffset = -moveRate * this.headerEle.offsetHeight;
@@ -111,6 +113,7 @@ export class XiamiPlayerComponent implements AfterViewInit {
 
   scrollToTop() {
     this.replyListDuring = '.5s';
+    this.headerDuring = '0.5s';
     this.replyListOffset = -this.replyListEle.clientHeight;
     this.headerOffset = 0;
     this.showReplyList = true;
@@ -118,6 +121,7 @@ export class XiamiPlayerComponent implements AfterViewInit {
 
   scrollToBottom() {
     this.replyListDuring = '.5s';
+    this.headerDuring = '0.5s';
     this.replyListOffset = -96;
     this.headerOffset = -48;
     this.showReplyList = false;
