@@ -1,5 +1,6 @@
 .xiami-container {
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
   .header {
     position: absolute;
     height: 48px;
@@ -18,5 +19,7 @@
     height: calc(100% - 48px);
     text-align: center;
     transition: transform ease-in-out;
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
   }
 }

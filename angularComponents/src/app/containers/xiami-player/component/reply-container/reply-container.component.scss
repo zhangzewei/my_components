@@ -1,0 +1,19 @@
+.reply-list-wrapper {
+  height: 100%;
+  overflow: auto;
+  display: block;
+}
+.reply-list {
+  margin: 0;
+  padding: 10px 20px;
+  list-style: none;
+
+  .reply-item {
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+}

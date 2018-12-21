@@ -1,0 +1,5 @@
+<div #listWrapperRef class="reply-list-wrapper" [ngStyle]="{ 'overflow-y': canScroll ? 'auto' : 'hidden' }">
+  <ul class="reply-list">
+    <li class="reply-item" *ngFor="let item of replyList">{{item.name}}</li>
+  </ul>
+</div>

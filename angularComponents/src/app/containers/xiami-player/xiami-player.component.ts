@@ -23,6 +23,8 @@ export class XiamiPlayerComponent implements AfterViewInit {
   canScroll = false;
   startTime = 0;
   endTime = 0;
+  replyListAtTop = true;
+  ticker = true;
 
   constructor(public eleRef: ElementRef) {
     this.xiamiContainer = this.eleRef.nativeElement;
@@ -40,13 +42,17 @@ export class XiamiPlayerComponent implements AfterViewInit {
   touchStart(event: TouchEvent) {
     this.touchStartPoint = { x: event.changedTouches[0].pageX, y: event.changedTouches[0].pageY };
     this.startTime = new Date().getTime();
+    if (!this.replyListAtTop) return;
   }
 
   touchMove(event: TouchEvent) {
+    let raf = null;
     this.touchEndPoint = { x: event.changedTouches[0].pageX, y: event.changedTouches[0].pageY };
     const distanceY = this.touchEndPoint.y - this.touchStartPoint.y;
     const moveRate = Math.abs(distanceY) / this.replyListEle.offsetHeight;
+    if (!this.replyListAtTop) return;
     if (distanceY <= 0 && !this.showReplyList) {// up
+      event.preventDefault();
       if (!(this.replyListOffset <= -this.replyListEle.clientHeight)) {
         this.headerDuring = '0.01s';
         this.replyListDuring = '0.01s';
@@ -57,6 +63,7 @@ export class XiamiPlayerComponent implements AfterViewInit {
       }
     }
     if (distanceY > 0 && this.showReplyList) {// down
+      event.preventDefault();
       if (!(this.replyListOffset >= -96)) {
         this.headerDuring = '0.01s';
         this.replyListDuring = '0.01s';
@@ -73,6 +80,7 @@ export class XiamiPlayerComponent implements AfterViewInit {
     const distanceY = this.touchEndPoint.y - this.touchStartPoint.y;
     this.endTime = new Date().getTime();
     const speed = Math.abs(distanceY) / (this.endTime - this.startTime);
+    if (!this.replyListAtTop) return;
     if (speed > this.maxSpeed || Math.abs(distanceY) > this.maxDistance) {
       this.canScroll = true;
     }
@@ -125,5 +133,9 @@ export class XiamiPlayerComponent implements AfterViewInit {
     this.replyListOffset = -96;
     this.headerOffset = -48;
     this.showReplyList = false;
+  }
+
+  checkReplyListScrollTop(isTop: boolean) {
+    this.replyListAtTop = isTop;
   }
 }
