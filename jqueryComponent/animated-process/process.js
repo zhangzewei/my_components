@@ -3,14 +3,37 @@ var processBar = function (barSelector) {
     var $item = $(item);
     var backgroundColor = $item.attr('data-bg') || 'none';
     var width = $item.attr('data-percent');
-    var startSide = $item.attr('data-start-side') || 'left';
-    var startSideCSS = startSide === 'left' ? { left: 0 } : { right: 0 };
     var speed = $item.attr('data-speed') * 1;
-    $item.css(startSideCSS)
-      .css({ 'background': backgroundColor })
+    $item.css({ 'background': backgroundColor })
       .animate(
-        { width: width }
+        {
+          width: width,
+          opacity: 1
+        }
         , speed || 1000
       );
   })
+}
+
+var processNumber = function (numberSelectors) {
+  $(numberSelectors).each(function (_, item) {
+    var $item = $(item);
+    var suffix = $item.attr('data-suffix');
+    var during = $item.attr('data-during') * 1;
+    var number = $item.attr('data-num') * 1;
+    var speed = during / number;
+    $item.css({ width: number - 5 + '%' });
+    $item.attr('data-curNumber', 0);
+    var timer = setInterval(function () {
+      var curNumber = $item.attr('data-curNumber') * 1;
+      if (curNumber < number) {
+        curNumber += 1;
+        $item.attr('data-curNumber', curNumber);
+        $item.text(curNumber + suffix);
+      } else {
+        clearInterval(timer);
+        timer = null;
+      }
+    }, speed);
+  });
 }
