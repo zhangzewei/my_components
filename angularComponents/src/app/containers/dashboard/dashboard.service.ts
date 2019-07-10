@@ -17,29 +17,8 @@ export class DashboardService {
       name: '虾米音乐播放器例子',
       path: '/xiami-player',
     }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
-    }, {
-      name: '虾米音乐播放器例子',
-      path: '/xiami-player',
+      name: '投票动画',
+      path: '/animate-vote',
     }
   ];
 

@@ -1,0 +1,11 @@
+.number-wrapper {
+  color: #fff;
+  transform: skewX(30deg);
+  display: flex;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

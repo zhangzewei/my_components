@@ -1,0 +1,48 @@
+.vote-container {
+  position: relative;
+  width: 300px;
+  margin: 100px auto;
+  height: 40px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  .process {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    transform: skewX(-30deg);
+
+    &.left {
+      left: -5px;
+      width: 80%;
+    }
+
+    &.right {
+      right: -5px;
+      width: 20%;
+    }
+
+    .content {
+      line-height: 40px;
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 3;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      height: 100%;
+
+      &.left {
+        background-color: red;
+        left: 0;
+      }
+  
+      &.right {
+        background-color: blue;
+        right: 0;
+      }
+    }
+  }
+}

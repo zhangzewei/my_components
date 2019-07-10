@@ -1,0 +1,12 @@
+<div class="animate-container">
+  <div class="vote-container">
+    <div class="process left">
+      <grow-number maxNum="80" suffix="%" during="1000"></grow-number>
+      <div class="content left" [@expandAnimation]="'in'"></div>
+    </div>
+    <div class="process right">
+      <grow-number maxNum="20" suffix="%" during="1000"></grow-number>
+      <div class="content right" [@expandAnimation]="'in'"></div>
+    </div>
+  </div>
+</div>
