@@ -11,6 +11,9 @@ import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { ReplyContainerComponent } from './containers/xiami-player/component/reply-container/reply-container.component';
 import { AnimateVoteComponent } from './containers/animate-vote/animate-vote.component';
 import { GrowNumberComponent } from './containers/animate-vote/components/grow-number/grow-number.component';
+import { DataFlowComponent } from './containers/data-flow-practice/data-flow.component';
+import { TodoItemComponent } from './containers/data-flow-practice/components/todoItem/todo-item.component';
+import { TodoDetailComponent } from './containers/data-flow-practice/container/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { GrowNumberComponent } from './containers/animate-vote/components/grow-n
     DashboardComponent,
     ReplyContainerComponent,
     AnimateVoteComponent,
-    GrowNumberComponent
+    GrowNumberComponent,
+    DataFlowComponent,
+    TodoItemComponent,
+    TodoDetailComponent
   ],
   imports: [
     BrowserModule,

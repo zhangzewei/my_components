@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px 20px;
+
+  .loading {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    border: 1px solid #33ee33;
+    border-radius: 2px;
+    padding: 5px;
+  }
+
+  button {
+    border: 1px solid #33ee33;
+    background: #fff;
+    border-radius: 2px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+}

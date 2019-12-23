@@ -19,6 +19,9 @@ export class DashboardService {
     }, {
       name: '投票动画',
       path: '/animate-vote',
+    }, {
+      name: 'todo list',
+      path: '/todolist-demo',
     }
   ];
 

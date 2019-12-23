@@ -1,0 +1,5 @@
+<div class="todo-item" id="{{todoId}}" [ngStyle]="isDeleted">
+  <a [routerLink]="['/todolist-detail', todoId]" class="item-text">{{todoText}}</a>
+  <div class="item-status">{{itemStatus}}</div>
+  <div class="delete-icon" (click)="deleteItem()">X</div>
+</div>
