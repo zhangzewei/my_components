@@ -22,12 +22,17 @@ export class TodoItemComponent implements DoCheck {
   ngDoCheck() {
   }
 
-  get isDeleted() {
+  get statusStyle() {
     if (this.todoItem.status === 'done') {
       return {
         textDecorationLine: 'line-through',
         background: '#e6e3e3',
         color: '#a2a2a2'
+      }
+    }
+    if (this.todoItem.status === 'doing') {
+      return {
+        color: '#ff8100'
       }
     }
     return null;

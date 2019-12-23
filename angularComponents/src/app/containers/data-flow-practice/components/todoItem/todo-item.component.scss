@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    border-bottom: 1px solid #00FF76;
+    border-bottom: 1px solid #3db98b;
     color: #333;
   }
   
@@ -15,5 +15,9 @@
 
   a {
     color: inherit;
+
+    &:hover {
+      color: #3db98b;
+    }
   }
 }

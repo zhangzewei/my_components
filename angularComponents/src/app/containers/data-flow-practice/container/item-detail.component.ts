@@ -23,13 +23,18 @@ export class TodoDetailComponent implements OnInit {
     private dataFlowService: DataFlowService
   ) {
     this.detailSubject$ = this.detailService.getDetailSubject();
-    this.detailId = this.route.snapshot.paramMap.get('id');
     this.detailSubject$.subscribe(this.updateDetail);
   }
 
   ngOnInit() {
+    const newId = this.route.snapshot.paramMap.get('id');
     this.isLoading = true;
-    this.detailService.getDetail(this.detailId);
+    if (newId === this.detailId) {
+      this.isLoading = false;
+    } else {
+      this.detailId = newId;
+      this.detailService.getDetail(this.detailId);
+    }
   }
 
   get status() {
