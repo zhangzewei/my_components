@@ -12,15 +12,14 @@ export const statusMapping = {
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.scss']
 })
-export class TodoItemComponent implements DoCheck {
+export class TodoItemComponent implements OnInit {
   @Input() todoItem: TodoList;
   constructor(
     private dtService: DataFlowService
   ) {
   }
 
-  ngDoCheck() {
-  }
+  ngOnInit() {}
 
   get statusStyle() {
     if (this.todoItem.status === 'done') {

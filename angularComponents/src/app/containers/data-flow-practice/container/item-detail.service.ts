@@ -20,7 +20,6 @@ export class DetailService {
   }
 
   getDetailSubject = () => {
-    this.updateData();
     return this.detailSubject;
   };
 

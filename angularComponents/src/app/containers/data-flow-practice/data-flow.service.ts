@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, timer } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import * as cuid from 'cuid';
 
 export enum TodoStatus {
@@ -45,18 +45,8 @@ export class DataFlowService {
     this.dataFlowSubject.next(this.dataFolwData);
   }
 
-  addTodo = (item: TodoList) => {
+  add = (item: TodoList) => {
     this.dataFolwData.list.push(item);
-    this.updateData();
-  }
-  
-  changeStatus = (item: TodoList) => {
-    this.dataFolwData.list = this.dataFolwData.list.map((d: TodoList) => {
-      if (d.id === item.id) {
-        return item;
-      }
-      return d;
-    });
     this.updateData();
   }
 
@@ -90,4 +80,14 @@ export class DataFlowService {
     const detail = this.dataFolwData.list.filter(item => item.id === id)[0];
     setTimeout(function() { callback(detail) }, 1000);
   };
+
+  changeStatus = (item: TodoList) => {
+    this.dataFolwData.list = this.dataFolwData.list.map((d: TodoList) => {
+      if (d.id === item.id) {
+        return item;
+      }
+      return d;
+    });
+    this.updateData();
+  }
 }

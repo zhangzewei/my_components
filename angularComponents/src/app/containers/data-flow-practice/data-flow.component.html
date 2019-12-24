@@ -1,3 +1,7 @@
 <div class="data-flow-container">
   <todo-item *ngFor="let item of todoList" [todoItem]="item"></todo-item>
 </div>
+<div class="foot">
+  <input type="text" (blur)="changeAddText($event)" />
+  <button (click)="addTodo()">增加</button>
+</div>
