@@ -14,6 +14,8 @@ import { GrowNumberComponent } from './containers/animate-vote/components/grow-n
 import { DataFlowComponent } from './containers/data-flow-practice/data-flow.component';
 import { TodoItemComponent } from './containers/data-flow-practice/components/todoItem/todo-item.component';
 import { TodoDetailComponent } from './containers/data-flow-practice/container/item-detail.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { NotificationDemoComponent } from './containers/notification-demo/notification-demo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TodoDetailComponent } from './containers/data-flow-practice/container/i
     GrowNumberComponent,
     DataFlowComponent,
     TodoItemComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    NotificationsComponent,
+    NotificationDemoComponent
   ],
   imports: [
     BrowserModule,
