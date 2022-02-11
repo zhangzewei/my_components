@@ -1,0 +1,41 @@
+.notification {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  border-radius: 0.5rem;
+  max-width: 500px;
+  margin: 1.75rem auto;
+  padding: 1.5rem;
+
+  button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    padding: 0;
+  }
+
+  &.info {
+    border-color: rgb(0, 157, 255);
+  }
+
+  &.error {
+    border-color: rgb(255, 68, 0);
+  }
+
+  &.success {
+    border-color: rgb(17, 206, 55);
+  }
+}

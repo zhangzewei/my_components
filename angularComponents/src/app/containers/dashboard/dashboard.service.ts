@@ -22,6 +22,9 @@ export class DashboardService {
     }, {
       name: 'todo list',
       path: '/todolist-demo',
+    }, {
+      name: 'notification demo',
+      path: '/notification-demo',
     }
   ];
 
